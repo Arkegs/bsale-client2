@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/stylesheets/general.css" type="text/css" rel="stylesheet">
+    <link href="/stylesheets/product.css" type="text/css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <h1>Static item page!</h1>
+	<div id="navbar" class="navbar">
+		<a href="/products" id="navlogo">
+			BSale
+        </a>
+        <div>
+            <form>
+                <input class="search-bar" type="text" maxlength="80" placeholder="Buscar productos"/>
+                <input class="search-bar-submit" type="submit" value="Buscar" />
+            </form>
+        </div>
+		<div id="myLinks">	
+			<a href="#top">Carro</a>
+        </div>
+	</div>
+    <div class="content">
+        <div class="product-container">
+            <div class="product-image-container">
+                <img class="product-image" src="http://images.lider.cl/wmtcl?source=url[file:/productos/1076032a.jpg]&sink">
+            </div>
+            <div class="product-info-container">
+                <div class="product-details">
+                    <p class="product-name">Tostadora poderosa ultra mega hiper super poderosa!</p>
+                    <div class="product-price">
+                        <span class="product-discount-price">$11.990 </span>
+                        <span class="product-discount-percent">25%</span>
+                        <p class="product-final-price">$9.990</p>
+                    </div>
+                    <button class="button-to-cart">Agregar al carro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <span class="footer-text">BSale challenge, 2022</span>
+    </footer>
 </body>
 </html>
