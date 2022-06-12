@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/stylesheets/general.css" type="text/css" rel="stylesheet">
     <link href="/stylesheets/product.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+    />
     <title>Document</title>
 </head>
 <body>
@@ -13,28 +19,22 @@
 		<a href="/products" id="navlogo">
 			BSale
         </a>
-        <div>
-            <form>
-                <input class="search-bar" type="text" maxlength="80" placeholder="Buscar productos"/>
-                <input class="search-bar-submit" type="submit" value="Buscar" />
-            </form>
-        </div>
 		<div id="myLinks">	
-			<a href="#top">Carro</a>
+			<a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
 	</div>
     <div class="content">
         <div class="product-container">
             <div class="product-image-container">
-                <img class="product-image" src="http://images.lider.cl/wmtcl?source=url[file:/productos/1076032a.jpg]&sink">
+                <img class="product-image" id="product-image" src="">
             </div>
             <div class="product-info-container">
                 <div class="product-details">
-                    <p class="product-name">Tostadora poderosa ultra mega hiper super poderosa!</p>
+                    <p id="product-name" class="product-name"></p>
                     <div class="product-price">
-                        <span class="product-discount-price">$11.990 </span>
-                        <span class="product-discount-percent">25%</span>
-                        <p class="product-final-price">$9.990</p>
+                        <span class="product-discount-price" id="product-discount-price"></span>
+                        <span class="product-discount-percent" id="product-discount-percent"></span>
+                        <p class="product-final-price" id="product-final-price"></p>
                     </div>
                     <button class="button-to-cart">Agregar al carro</button>
                 </div>
@@ -44,5 +44,6 @@
     <footer class="footer">
         <span class="footer-text">BSale challenge, 2022</span>
     </footer>
+    <script src="/js/singleProduct.js"></script>
 </body>
 </html>

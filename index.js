@@ -5,12 +5,19 @@ if(process.env.NODE_ENV !== "production"){
 
 // Require packages
 const express = require('express');
+const cors = require('cors');
 const path = require('path');
 
 // Express app setup
 const port = process.env.PORT || 3000;
 const app = express();
 
+const corsOptions = {
+    origin: process.env.SERVER_URL,
+    optionsSuccessStatus: 200
+}
+
+app.use(cors(corsOptions));
 app.set('views', path.join(__dirname, 'public/views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
