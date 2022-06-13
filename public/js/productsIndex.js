@@ -5,7 +5,7 @@ const loaderIcon = document.getElementById('loader-icon')
 const fallbackImage = 'https://upload.wikimedia.org/wikipedia/commons/6/66/Sin_datos.jpg';
 
 // Set up fetch URL
-const baseUrl = 'http://localhost:5000/api/';
+const baseUrl = 'https://bsale-challenge-server.herokuapp.com/api/';
 let currentSearch = 'products?';
 let currentSort = '';
 let currentPage = '';
@@ -55,7 +55,7 @@ const fetchAndRender = (url) => {
     .catch(
         err => {
             loaderIcon.style.display='none';
-            productsContainer.innerHTML = '<h3>Hubo un problema. Por favor, inténtelo más tarde</h3>'
+            productsContainer.innerHTML = '<h3>Hubo un problema. Por favor, refresque la página.</h3>'
         }
     );
 }
@@ -82,6 +82,7 @@ const handleSort = (sortType) => {
     fetchAndRender(baseUrl + currentSearch + currentSort);
 }
 
+// Function for loading more data based on 'page'
 const handlePage = () => {
     page += 1;
     currentPage = '&page=' + (page);

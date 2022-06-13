@@ -1,13 +1,13 @@
-const baseUrl = 'http://localhost:5000/api/';
+const baseUrl = 'https://bsale-challenge-server.herokuapp.com/api/';
 const itemId = window.location.pathname.split('/')[2];
 const fallbackImage = 'https://upload.wikimedia.org/wikipedia/commons/6/66/Sin_datos.jpg';
 
+// After page load, it tries to get and display the data from the required item.
 fetch(baseUrl + `products/${itemId}`)
     .then(
         res => res.json()
     ).then(
         res => {
-            console.log(res);
             if(res.status === "success"){
                 const item = res.data[0];
                 document.getElementById('product-image').src = (item.url_image || fallbackImage);
